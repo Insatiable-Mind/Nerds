@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дизайн-студия Nerds</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <img class="header__logo" src="img/all/header-logo.png" title="Логотип Nerds" alt="Логотип Nerds" width="139" height="56">
+          <nav class="top-nav">
+            <ul class="top-nav__list">
+              <li class="top-nav__item top-nav__item_active">
+                <span class="top-nav__link">Студия</span>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link">Клиенты</a>
+              </li>
+              <li class="top-nav__item">
+                <a href="catalog.html" class="top-nav__link">Магазин</a>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__top-cart" href="#">Корзина</a>
+        </div>
+        <div class="slider">
+          <ul class="slider__list">
+            <li class="slider__item slider__item_visible">
+              <h2 class="section__title">
+                Долго, дорого, <br>
+                скрупулезно.
+              </h2>
+              <p class="slider__text section__text">
+                Математически выверенный дизайн <br>
+                для вашего сайта или мобильного приложения.
+              </p>
+              <a href="#" class="slider__button button button_primary">
+                Узнать больше
+              </a>
+            </li>
+            <li class="slider__item">
+              <h2 class="section__title">
+                Красиво, круто, <br>
+                одиозно.
+              </h2>
+              <p class="slider__text section__text">
+                Восхищайте и покоряйте. <br>
+                Мобильные приложения, перед которыми не устоять.
+              </p>
+              <a href="#" class="slider__button button button_secondary">
+                Узнать больше
+              </a>
+            </li>
+            <li class="slider__item">
+              <h2 class="section__title">
+                Блестяще, интригующе, <br>
+                амбициозно.
+              </h2>
+              <p class="slider__text section__text">
+                Безупречные презентации, <br>
+                захватывающие все внимание аудитории.
+              </p>
+              <a href="#" class="slider__button button button_tertiary">
+                Узнать больше
+              </a>
+            </li>
+          </ul>
+          
+          <div class="slider__nav">
+            <input type="radio" name="slider__switch" class="slider__switch" id="slider__switch-left" checked>
+            <label class="slider__switch-label" for="slider__switch-left"></label>
+            <input type="radio" name="slider__switch" class="slider__switch" id="slider__switch-center">
+            <label class="slider__switch-label" for="slider__switch-center"></label>
+            <input type="radio" name="slider__switch" class="slider__switch" id="slider__switch-right">
+            <label class="slider__switch-label" for="slider__switch-right"></label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="services">
+        <div class="services__wrapper">
+          <div class="services__item">
+            <img class="services__img" src="img/index/services/services-websites.jpg" title="Веб-сайты" alt="Веб-сайты" width="240" height="124">
+            <h2 class="services__item-title">Веб-сайты</h2>
+            <p class="services__item-text">
+              Мир никогда не будет прежним после того как увидит ваш сайт!
+            </p>
+            <a href="" class="button button_primary">Заказать</a>
+          </div>
+          <div class="services__item">
+            <img class="services__img" src="img/index/services/services-apps.jpg" title="Мобильные приложения" alt="Мобильные приложения" width="240" height="124">
+            <h2 class="services__item-title">Приложения</h2>
+            <p class="services__item-text">
+              Покорите топ-10 приложений
+              <br> в AppStrore и Google Play
+            </p>
+            <a href="" class="button button_secondary">Заказать</a>
+          </div>
+          <div class="services__item">
+            <img class="services__img" src="img/index/services/services-presentations.jpg" title="Презентации" alt="Презентации" width="240" height="124">
+            <h2 class="services__item-title">Презентации</h2>
+            <p class="services__item-text">
+              Вы даже не подозреваете, насколько вы изумительны!
+            </p>
+            <a href="" class="button button_tertiary">Заказать</a>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__wrapper">
+          <div class="about__left">
+            <b class="section__title">
+          Мы — маленькая, но гордая дизайн-студия из Краснодара. 
+        </b>
+            <p class="about__text section__text">
+              Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
+            </p>
+            <div class="about__work">
+              <span class="about__work-title">
+            Выполняем заказы на разработку:
+          </span>
+              <ul class="about__work-list">
+                <li class="about__work-item">
+                  Веб-сайтов любой сложности
+                </li>
+                <li class="about__work-item">
+                  Мобильных приложений для iOS и Android
+                </li>
+                <li class="about__work-item">
+                  Слайдшоу и видео для корпоративных презентаций
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="about__right">
+            <img class="about__right-logo" src="img/index/about/about-logo.png" title="Логотип Nerds" alt="Логотип Nerds" width="187" height="75">
+            <span class="about__right-since">Since 2004</span>
+            <div class="about__work">
+              <span class="about__work-title">Как мы работаем:</span>
+              <ul class="about__work-list">
+                <li class="about__work-item">
+                  С самоотдачей 146%
+                </li>
+                <li class="about__work-item">
+                  Соблюдая сроки на 100%
+                </li>
+                <li class="about__work-item">
+                  По предоплате 50%
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="partners__wrapper">
+          <a href="#" class="partners__element">
+            <img  class="partners__element-img" src="img/index/partners/partners-glukhanko.png" title="Glukhanko" alt="Glukhanko" width="198" height="37">
+          </a>
+          <a href="#" class="partners__element">
+            <img  class="partners__element-img" src="img/index/partners/partners-htmlacademy.png" title="HTML Academy" alt="HTML Academy" width="199" height="68">
+          </a>
+          <a href="#" class="partners__element">
+            <img  class="partners__element-img" src="img/index/partners/partners-borodinski.png" title="Barbershop Borodinski" alt="Barbershop Borodinski" width="209" height="86">
+          </a>
+        </div>
+      </section>
+      <article class="map" id="map">
+        <div class="map__contacts" id="map__contacts">
+          <h2 class="map__contacts-title">
+          NЁRDS DESIGN STUDIO
+        </h2>
+          <span class="map__contacts-address">
+          191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        </span>
+          <a class="map__contacts-phone" href="tel:+78122757575">
+          тел. +7 (812) 275-75-75
+        </a>
+          <a href="contact-form.html" class="map__contacts-button button button_primary">
+          Напишите нам
+        </a>
+        </div>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__social">
+          <a href="https://vk.com/" class="footer__social-icon footer__social-icon_vk" target="_blank" >Вконтакте</a>
+          <a href="https://www.facebook.com/" class="footer__social-icon footer__social-icon_fb" target="_blank" >Фэйсбук</a>
+          <a href="https://www.instagram.com/" class="footer__social-icon footer__social-icon_inst" target="_blank" >Инстаграм</a>
+        </div>
+        <div class="footer__promo">
+          <b class="footer__title section__title">
+            Давайте дружить, это выгодно!
+          </b>
+          <p class="section__text footer__text">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="contact-form">
+    <div class="contact-form__close-button"></div>
+    <!-- Attention! Attr of the form (form id="form") is then changed in script.js for html linter -->
+    <form id="form" method="post" action="#">
+    <div class="contact-form__id">
+      <label class="contact-form__label">
+        Ваше имя:
+        <input type="text" class="contact-form__input" name="name" placeholder="Представьтесь, пожалуйста" required>
+      </label>
+      <label class="contact-form__label">
+        Ваш e-mail:
+        <input type="email" class="contact-form__input" name="email" placeholder="Для отправки ответа" required>
+      </label>
+    </div>
+      <label class="contact-form__label">
+        Текст письма:
+        <textarea class="contact-form__input contact-form__input_message" name="message" placeholder="В свободной форме" required></textarea>
+      </label>
+      <button class="contact-form__button button button_primary" type="submit">
+        Отправить
+      </button>
+    </form>
+  </div>
+  <div class="contact-form__overlay"></div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

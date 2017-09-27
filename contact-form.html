@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дизайн-студия Nerds</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <a href="index.html">
+            <img class="header__logo" src="img/all/header-logo.png" title="Логотип Nerds" alt="Логотип Nerds" width="139" height="56">
+          </a>
+          <nav class="header__top-nav">
+            <ul class="header__top-nav-list">
+              <li class="header__top-nav-item">
+                <a href="index.html" class="header__top-nav-link">Студия</a>
+              </li>
+              <li class="header__top-nav-item">
+                <a href="#" class="header__top-nav-link">Клиенты</a>
+              </li>
+              <li class="header__top-nav-item">
+                <span class="header__top-nav-link">Магазин</span>
+              </li>
+              <li class="header__top-nav-item">
+                <a href="#" class="header__top-nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__top-cart">Корзина</div>
+        </div>
+        <h1 class="header__title">
+          Свяжитесь с нами
+        </h1>
+      </div>
+    </header>
+    <main class="main">
+      <section class="contact-form__wrapper">
+        <!-- Attention! Attr of the form (form id="form") is then changed in script.js for html linter -->
+        <form id="form" method="post" action="#">
+          <div class="contact-form__id">
+            <label class="contact-form__label">
+              Ваше имя:
+              <input type="text" class="contact-form__input" name="name" placeholder="Представьтесь, пожалуйста" required>
+            </label>
+            <label class="contact-form__label">
+              Ваш e-mail:
+              <input type="email" class="contact-form__input" name="email" placeholder="Для отправки ответа" required>
+            </label>
+          </div>
+          <label class="contact-form__label">
+            Текст письма:
+            <textarea class="contact-form__input contact-form__input_message" name="message" placeholder="В свободной форме" required></textarea>
+          </label>
+          <button class="contact-form__button button button_primary" type="submit">
+            Отправить
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__social">
+          <a href="https://vk.com/" class="footer__social-icon footer__social-icon_vk" target="_blank" >Вконтакте</a>
+          <a href="https://www.facebook.com/" class="footer__social-icon footer__social-icon_fb" target="_blank" >Фэйсбук</a>
+          <a href="https://www.instagram.com/" class="footer__social-icon footer__social-icon_inst" target="_blank" >Инстаграм</a>
+        </div>
+        <div class="footer__promo">
+          <b class="footer__title section__title">
+            Давайте дружить, это выгодно!
+          </b>
+          <p class="section__text footer__text">
+            Скидка 10% для друзей из социальных сетей.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

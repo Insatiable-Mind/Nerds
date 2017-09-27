@@ -1,0 +1,95 @@
+.footer {
+  flex: 0 0 auto; // To pin the footer to the bottom of the page
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 75%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: {
+    top: 7.5rem;
+    bottom: 7.5rem;
+  } 
+}
+
+.footer__title {
+  margin-bottom: 1rem;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0;
+
+  width: 100%;
+  max-width: 24rem;
+  margin-right: 9.09%;
+}
+
+.footer__social-icon {
+  position: relative;
+  z-index: 0;
+
+  width: 6.3rem;
+  height: 6.3rem;
+
+  background-color: $grey-tertiary;
+  border-radius: 50%;
+
+  transition: background-color .3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $red;
+  }
+
+  &:active {
+    background-color: #d6494d;
+    box-shadow: 0 -.3rem #b63e42;
+  }
+}
+
+.footer__social-icon::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: inline-block;
+  width: 1em;
+
+  font-family: "symbols-nerds";
+  font-size: 2.3rem;
+  line-height: .696;
+  text-align: center;
+  text-transform: none;
+  font-variant: normal;
+  color: $white;
+
+  speak: none;
+  transform: translate(-50%, -50%);
+}
+
+.footer__social-icon_vk::after {
+  content: "\76";
+}
+
+.footer__social-icon_fb::after {
+  content: "\66";
+}
+
+.footer__social-icon_inst::after {
+  content: "📷";
+}
+
+.footer__text {
+  font-weight: bold;
+}

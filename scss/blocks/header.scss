@@ -1,0 +1,129 @@
+.header {
+  padding: {
+    top: 2.7rem;
+    bottom: 7rem;
+  }
+  
+  font-size: 1.4rem;
+  
+  background-color: $grey-primary;
+}
+
+.header__wrapper {
+  box-sizing: border-box;
+  width: 75%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+
+  text-transform: uppercase;
+}
+
+.top-nav {
+  width: 45%;
+  margin-left: 13.5%;
+}
+
+.header__logo {
+  display: block;
+  width: 13.9rem;
+  height: 5.6rem;
+}
+
+.top-nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav__item {
+  list-style: none;
+
+  transition: color .2s ease-in-out;
+  cursor: pointer;
+}
+
+.top-nav__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__top-cart{
+  color: inherit;
+  text-decoration: none;
+
+  transition: color .2s ease-in-out;
+  cursor: pointer;
+
+  &::before {
+    content: "\62";
+    display: inline-block;
+    width: 1em;
+    margin-right: 1.3rem;
+
+    font-family: "symbols-nerds";
+    font-size: 1.6rem;
+    line-height: .535;
+    text-align: center;
+    text-transform: none;
+    text-decoration: inherit;
+    font-variant: normal;
+    color: #a6a6a6;
+
+    speak: none;
+    transition: color .2s ease-in-out;
+  }
+}
+
+.top-nav__item:hover,
+.header__top-cart:hover,
+.header__top-cart:hover::before {
+  color: $red;
+}
+
+.top-nav__item:active,
+.header__top-cart:active,
+.header__top-cart:active::before {
+  color: $black;
+  opacity: .4;
+}
+
+.top-nav__item_active,
+.header__top-cart_active {
+  border-bottom: .2rem solid $red;
+
+  &:hover {
+    color: $black;
+
+    cursor: default;
+  }
+}
+
+.header__title {
+  width: 100%;
+  max-width: 65.5rem;
+  margin: 0 auto;
+  padding: {
+    top: 1.7rem;
+    bottom: 1.3rem;
+  }
+
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
