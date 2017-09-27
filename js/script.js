@@ -138,7 +138,7 @@ function init(){
 
     myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, { 
       iconLayout: 'default#image',
-      iconImageHref: '../img/all/map/map-logomarker.png',
+      iconImageHref: 'img/all/map/map-logomarker.png',
       iconImageSize: [231, 190],
       iconImageOffset: [-45, -200],
     });
