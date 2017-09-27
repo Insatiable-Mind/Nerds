@@ -254,13 +254,13 @@ body {
     margin: 0; }
 
 .slider__item:first-child {
-  background-image: url(../../img/index/slider/slider-1.png); }
+  background-image: url(../img/index/slider/slider-1.png); }
 
 .slider__item:nth-child(2) {
-  background-image: url(../../img/index/slider/slider-2.png); }
+  background-image: url(../img/index/slider/slider-2.png); }
 
 .slider__item:nth-child(3) {
-  background-image: url(../../img/index/slider/slider-3.png); }
+  background-image: url(../img/index/slider/slider-3.png); }
 
 .slider__text {
   margin-bottom: 28px; }
