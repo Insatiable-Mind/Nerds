@@ -5,23 +5,23 @@
   document.querySelector("#form").setAttribute("action", "");
 
   /*** CONTACT FORM ***/
-  var contactButton = document.querySelector('.map__contacts-button'),
-    contactForm = document.querySelector('.contact-form'),
-    closeButton = contactForm.querySelector('.contact-form__close-button'),
-    contactFormOverlay = document.querySelector('.contact-form__overlay');
-
+  let contactButton = document.querySelector('.map__contacts-button');
   contactButton.addEventListener('click', openForm);
+
+  let contactForm = document.querySelector('.contact-form');
+  let closeButton = contactForm.querySelector('.contact-form__close-button');
   closeButton.addEventListener('click', closeForm);
+
+  let contactFormOverlay = document.querySelector('.contact-form__overlay');
   contactFormOverlay.addEventListener('click', closeForm);
 
   function openForm(e) {
-    var nameInput = contactForm.querySelector('input[name="name"]');
+    let nameInput = contactForm.querySelector('input[name="name"]');
 
     e.preventDefault();
 
     contactForm.classList.add('contact-form_open');
     contactFormOverlay.classList.add('contact-form__overlay_open');
-
     nameInput.focus();
   }
 
@@ -32,14 +32,13 @@
 
 
   /*** SLIDER ***/
-  var sliderList = document.querySelector('.slider__list'),
-      sliderItem = document.querySelectorAll('.slider__item');
+  let sliderList = document.querySelector('.slider__list');
+  let sliderItem = sliderList.querySelectorAll('.slider__item');
+  let slideWidth = sliderItem[0].offsetWidth;
+  let slideMargin = getComputedStyle(sliderItem[0]).marginRight;
+  let sliderSwitch = document.querySelectorAll('.slider__switch');
 
   if (sliderItem.length !== 0) {
-    var slideWidth = sliderItem[0].offsetWidth,
-      sliderSwitch = document.querySelectorAll('.slider__switch'),
-      slideMargin = getComputedStyle(sliderItem[0]).marginRight;
-
     slideMargin = +slideMargin.replace('px', '');
 
     sliderSwitch[0].addEventListener('click', function() {
@@ -52,13 +51,14 @@
       showSlide(2);
     });
 
-    var showSlideshow = setInterval(function() {
+    let showSlideshow = setInterval(function() {
       changeSlide(detectSlideNumber());
     }, 8000); 
 
     sliderList.addEventListener('mouseover', function() {
       clearInterval(showSlideshow);
     });
+
     sliderList.addEventListener('mouseout', function() {
       showSlideshow = setInterval(function() {
         changeSlide(detectSlideNumber());
@@ -71,17 +71,18 @@
   }
 
   function showSlide(slideNumber) {
-    var slidePosition = findSlidePosition(slideNumber, slideWidth),
-        slideSum = sliderItem.length;
+    let slidePosition = findSlidePosition(slideNumber, slideWidth);
+    let slideSum = sliderItem.length;
 
     sliderList.style.left = slidePosition + 'px';
   }
 
   function changeSlide(slideNumber) {
-    var nextSlidePosition = findSlidePosition(slideNumber + 1, slideWidth),
-        slideSum = sliderItem.length;
+    let nextSlidePosition = findSlidePosition(slideNumber + 1, slideWidth);
 
     sliderSwitch[slideNumber].checked = false;
+
+    let slideSum = sliderItem.length;
 
     if (slideNumber === slideSum - 1) {
       nextSlidePosition = 0;
@@ -94,15 +95,15 @@
   }
 
   function detectSlideNumber() {
-    var slidePosition = sliderList.style.left.replace('px', '');
+    let slidePosition = sliderList.style.left.replace('px', '');
 
     return (0 - slidePosition) / (slideWidth + slideMargin);
   }
 
 
   /*** CATALOG: SORTING ARROWS ***/
-  var arrowUp = document.querySelector('.catalog__sorting-arrow_up'),
-      arrowDown = document.querySelector('.catalog__sorting-arrow_down');
+  let arrowUp = document.querySelector('.catalog__sorting-arrow_up');
+  let arrowDown = document.querySelector('.catalog__sorting-arrow_down');
 
   if (arrowUp !== null && arrowDown !== null) {
     arrowUp.addEventListener('click', makeArrowActive);
@@ -120,28 +121,28 @@
       arrowUp.classList.add('catalog__sorting-arrow_active');
     } 
   }
-
 }());
 
 
 /*** YANDEX MAP ***/
 ymaps.ready(init);
-var myMap,
-    myPlacemark;
 
 function init(){
-    myMap = new ymaps.Map('map', {
-      center: [59.939212, 30.319986],
-      zoom: 17,
-      controls: []
-    });
+  let myMap;
+  let myPlacemark;
 
-    myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, { 
-      iconLayout: 'default#image',
-      iconImageHref: 'img/all/map/map-logomarker.png',
-      iconImageSize: [231, 190],
-      iconImageOffset: [-45, -200],
-    });
+  myMap = new ymaps.Map('map', {
+    center: [59.939212, 30.319986],
+    zoom: 17,
+    controls: []
+  });
 
-    myMap.geoObjects.add(myPlacemark);
+  myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, { 
+    iconLayout: 'default#image',
+    iconImageHref: 'img/all/map/map-logomarker.png',
+    iconImageSize: [231, 190],
+    iconImageOffset: [-45, -200],
+  });
+
+  myMap.geoObjects.add(myPlacemark);
 }
