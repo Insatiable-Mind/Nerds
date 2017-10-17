@@ -23,6 +23,9 @@ html,
 body {
   height: 100%; }
 
+body {
+  min-width: 1200px; }
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,6 +162,8 @@ body {
   cursor: pointer; }
 
 .top-nav__link {
+  display: inline-block;
+  height: 100%;
   text-decoration: none;
   color: inherit; }
 
